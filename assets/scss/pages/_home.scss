@@ -1,0 +1,1792 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// * Hero section start
+
+.hero {
+  position: relative;
+  background-color: $color-bg-gray;
+  padding-bottom: 200px;
+  width: 100%;
+  .container {
+    @include container(80%);
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 200px;
+
+      .heroCap {
+        top: 100px;
+        z-index: 3;
+        span {
+          font-family: "DM Sans", sans-serif;
+          color: #6d6e8d;
+          font-size: 22px;
+          font-weight: 500;
+          display: inline-block;
+          margin-bottom: 20px;
+          line-height: 1.3;
+        }
+        h1 {
+          color: #00044a;
+          font-family: "DM Sans", sans-serif;
+          font-size: 70px;
+          font-weight: 700;
+          line-height: 1.3;
+          margin-bottom: 40px;
+        }
+        .heroBtnGroup {
+          .btnOne {
+            @include btn(#000dff);
+            &:hover {
+              background-color: $color-green;
+            }
+          }
+          .btnTwo {
+            @include btn(#27cb8b);
+            margin-left: 20px;
+            &:hover{
+              background-color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+    .heroTittle {
+      position: absolute;
+      z-index: 1;
+      right: 0px;
+      left: 0%;
+      top: 290px;
+      text-align: center;
+      width: 100%;
+      h2 {
+        font-family: "DM Sans", sans-serif;
+        color: #fff;
+        font-size: 484px;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -11px;
+        -webkit-text-stroke-width: 32px;
+        -webkit-text-stroke-color: #fff;
+      }
+    }
+  }
+
+  .heroImg {
+    img {
+      position: absolute;
+      right: 9%;
+      z-index: 2;
+      bottom: 0;
+      width: 772px;
+      height: 586px;
+    }
+  }
+  .heroShape {
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+  .heroShapeMini {
+    position: absolute;
+    left: 10%;
+    bottom: -7%;
+    z-index: 2;
+  }
+}
+
+// * Hero section end
+
+// * Slider section start
+
+.slider {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .container {
+    .row {
+      .sectionTittle {
+        text-align: center;
+        padding-bottom: 50px;
+        span {
+          color: $color-primary;
+          font-size: 120px;
+          font-weight: 700;
+          line-height: 1;
+          margin-bottom: 8px;
+          display: block;
+        }
+        h2 {
+          font-family: "DM Sans", sans-serif;
+          color: $color-blue;
+          text-transform: capitalize;
+          font-size: 46px;
+          display: block;
+          font-weight: 700;
+          margin-bottom: 25px;
+        }
+        p {
+          font-family: "DM Sans", sans-serif;
+          color: #6d6e8d;
+          font-size: 16px;
+          line-height: 30px;
+          margin-bottom: 15px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  .cardBox {
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 45px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      .jobIcon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+      }
+      .cardTittle {
+        h5 {
+          font-size: 24px;
+          font-weight: bold;
+          color: $color-blue;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 20px;
+          line-height: 1.6;
+        }
+        .productBtn {
+          color: $color-primary;
+          font-size: 16px;
+          background-color: rgba(0, 13, 255, 0.06);
+          display: inline-block;
+          padding: 14px 37px;
+          border-radius: 30px;
+          text-transform: uppercase;
+          font-weight: 700;
+          transition: all 0.3s ease;
+          &:hover{
+            background-color: $color-primary;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// * Slider section end
+
+// * About section start
+
+.about {
+  background-color: $color-bg-gray;
+  padding: 200px 0;
+  position: relative;
+  .container {
+    .row {
+      display: flex;
+      gap: 200px;
+      .aboutImg {
+        max-width: 60%;
+        img {
+          width: 100%;
+        }
+      }
+      .aboutCap {
+        max-width: 40%;
+        h2 {
+          text-transform: uppercase;
+          font-family: "DM Sans", sans-serif;
+          color: $color-blue;
+          text-transform: capitalize;
+          font-size: 46px;
+          display: block;
+          font-weight: 700;
+          margin-bottom: 25px;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 1.8;
+          font-family: "DM Sans", sans-serif;
+          color: #6d6e8d;
+          margin-bottom: 22px;
+        }
+        .btn {
+          @include btn(#000dff);
+          &:hover {
+            background-color: $color-green;
+            color: $color-white;
+          }
+        }
+      }
+    }
+    .aboutTittle {
+      position: absolute;
+      z-index: 1;
+      bottom: -10px;
+      right: 0px;
+      left: 0%;
+      text-align: center;
+      z-index: 0;
+      h2 {
+        font-family: "DM Sans", sans-serif;
+        color: #fff;
+        font-size: 239px;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: 800;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #fff;
+      }
+    }
+  }
+}
+
+// * About section end
+
+// * Category section start
+
+.category {
+  padding-top: 100px;
+  .container {
+    .row {
+      .sectionTittle {
+        text-align: center;
+        padding-bottom: 50px;
+        h2 {
+          font-family: "DM Sans", sans-serif;
+          color: $color-blue;
+          text-transform: capitalize;
+          font-size: 46px;
+          display: block;
+          font-weight: 700;
+          margin-bottom: 25px;
+        }
+        p {
+          font-family: "DM Sans", sans-serif;
+          color: #6d6e8d;
+          font-size: 16px;
+          line-height: 30px;
+          margin-bottom: 15px;
+          font-weight: normal;
+        }
+      }
+      .cardWrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .card {
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 45px 20px;
+          transition: transform 0.3s, box-shadow 0.3s;
+          width: 100%;
+          max-width: 350px;
+          margin: 10px;
+          .cardIcon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+          }
+          h5 {
+            margin-bottom: 24px;
+            .cardTittle {
+              font-size: 24px;
+              font-weight: bold;
+              color: $color-blue;
+            }
+          }
+          .cardDescription {
+            color: #6d6e8d;
+            font-size: 16px;
+            margin-bottom: 24px;
+          }
+          .btnCard {
+            color: $color-primary;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: all 0.3s ease;
+          }
+          &:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            .btnCard {
+              background-color: rgba(0, 13, 255, 0.06);
+              left: 0px;
+              padding: 10px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * Category section end
+
+// * Testimonial section start
+
+.testimonial {
+  padding: 100px 0;
+  .container {
+    .row {
+      .wrapper {
+        background-color: $color-primary;
+        border-radius: 10px;
+        padding: 60px 200px 40px;
+        .testiWrapper {
+          padding: 30px 35px;
+          .testiCap {
+            position: relative;
+            z-index: 9999;
+
+            img {
+              position: absolute;
+              top: -33px;
+              left: -34px;
+              z-index: -1;
+            }
+            p {
+              font-size: 28px;
+              color: #fff;
+              line-height: 1.6;
+              margin-bottom: 25px;
+              font-weight: 400;
+            }
+          }
+          .testiFounder {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .testiText {
+              span {
+                color: #fff;
+                font-weight: 500;
+                line-height: 1.5;
+                font-size: 22px;
+              }
+              p {
+                color: #fff;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .swiper-pagination {
+          position: absolute;
+          z-index: 9999;
+          color: #000;
+          width: 100px;
+          height: 100px;
+          bottom: 100px;
+          left: 0;
+        }
+        .tShape {
+          position: absolute;
+          bottom: -20px;
+          right: 0%;
+          z-index: 1;
+          img {
+            width: 384px;
+            height: 259px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// * Testimonial section end
+
+// ! Responsive
+
+// ! 1200px - 1400px
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .hero {
+    padding-bottom: 150px;
+
+    .container {
+      .row {
+        padding-top: 150px;
+
+        .heroCap {
+          span {
+            font-size: 20px;
+          }
+          h1 {
+            font-size: 60px;
+          }
+        }
+        .heroBtnGroup {
+          .btnOne,
+          .btnTwo {
+            padding: 12px 30px;
+          }
+        }
+      }
+      .heroTittle h2 {
+        font-size: 400px;
+      }
+    }
+
+    .heroImg img {
+      right: 2%;
+      width: 672px;
+      height: 486px;
+    }
+    .heroShape{
+      img{
+        width: 672px;
+        height: 486px;
+      }
+    }
+  }
+
+  .slider {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .sectionTittle {
+      span {
+        font-size: 100px;
+      }
+      h2 {
+        font-size: 40px;
+      }
+    }
+    .cardBox .card {
+      max-width: 270px;
+      padding: 35px 15px;
+    }
+  }
+
+  .about {
+    padding: 150px 0;
+
+    .container {
+      .row {
+        gap: 150px;
+
+        .aboutCap {
+          h2 {
+            font-size: 40px;
+          }
+        }
+      }
+      .aboutTittle h2 {
+        font-size: 200px;
+      }
+    }
+  }
+
+  .category {
+    padding-top: 80px;
+
+    .sectionTittle h2 {
+      font-size: 40px;
+    }
+    .cardWrapper {
+      grid-template-columns: repeat(2, 1fr);
+      .card {
+        max-width: 300px;
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 80px 0;
+
+    .wrapper {
+      padding: 40px 150px 30px;
+      .testiCap p {
+        font-size: 24px;
+      }
+      .testiFounder .testiText span {
+        font-size: 20px;
+      }
+      .swiper-pagination {
+        bottom: 80px;
+      }
+      .tShape img {
+        width: 320px;
+        height: 220px;
+      }
+    }
+  }
+}
+
+// ! 992px - 1199px
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hero {
+    padding-bottom: 150px;
+    .container {
+      @include container(90%);
+      .row {
+        padding-top: 150px;
+
+        .heroCap {
+          span {
+            font-size: 20px;
+            margin-bottom: 15px;
+          }
+          h1 {
+            font-size: 60px;
+            margin-bottom: 30px;
+          }
+          .heroBtnGroup {
+            .btnOne,
+            .btnTwo {
+              padding: 10px 20px;
+              font-size: 14px;
+            }
+            .btnTwo {
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+      .heroTittle {
+        top: 250px;
+        h2 {
+          font-size: 350px;
+          -webkit-text-stroke-width: 20px;
+        }
+      }
+    }
+    .heroImg {
+      img {
+        right: 1%;
+        width: 522px;
+        height: 460px;
+      }
+    }
+    .heroShape {
+      img {
+        width: 463px;
+        height: 411px;
+      }
+    }
+  }
+
+  .slider {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .container {
+      .row {
+        .sectionTittle {
+          span {
+            font-size: 100px;
+          }
+          h2 {
+            font-size: 40px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .cardBox {
+      .card {
+        padding: 35px 15px;
+        max-width: 280px;
+        .jobIcon {
+          width: 50px;
+          height: 50px;
+        }
+        .cardTittle h5 {
+          font-size: 22px;
+        }
+        .productBtn {
+          padding: 12px 30px;
+        }
+      }
+    }
+  }
+
+  .about {
+    padding: 150px 0;
+    .container {
+      @include container(90%);
+      .row {
+        gap: 40px;
+        .aboutImg {
+          height: 540px;
+          width: 570px;
+          img {
+            width: 100%;
+          }
+        }
+        .aboutCap {
+          h2 {
+            font-size: 36px;
+            br {
+              display: none;
+            }
+          }
+          p {
+            font-size: 16px;
+          }
+          .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+          }
+        }
+      }
+      .aboutTittle {
+        h2 {
+          font-size: 200px;
+        }
+      }
+    }
+  }
+
+  .category {
+    padding-top: 80px;
+    .container {
+      @include container(90%);
+      .row {
+        .sectionTittle {
+          h2 {
+            font-size: 40px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+        .cardWrapper {
+          grid-template-columns: repeat(3, 1fr);
+          .card {
+            max-width: 300px;
+            padding: 25px 40px;
+            .cardIcon {
+              width: 50px;
+              height: 50px;
+            }
+            .cardDescription {
+              font-size: 15px;
+              br {
+                display: none;
+              }
+            }
+            .btnCard {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 80px 0;
+    .container {
+      @include container(90%);
+      .row {
+        .wrapper {
+          padding: 40px 150px 30px;
+          .testiWrapper {
+            padding: 20px 30px;
+            .testiCap p {
+              font-size: 24px;
+            }
+          }
+          .testiFounder {
+            .testiText {
+              span {
+                font-size: 20px;
+              }
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+          .tShape img {
+            width: 300px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 768px - 992px
+@media (min-width: 768px) and (max-width: 992px) {
+  .hero {
+    padding-bottom: 120px;
+    .container {
+      @include container(90%);
+      .row {
+        padding-top: 120px;
+
+        .heroCap {
+          padding-top: 30px;
+          span {
+            font-size: 33px;
+            margin-bottom: 12px;
+          }
+          h1 {
+            font-size: 70px;
+            margin-bottom: 25px;
+          }
+          .heroBtnGroup {
+            .btnOne,
+            .btnTwo {
+              padding: 21px 42px;
+              font-size: 16px;
+            }
+            .btnTwo {
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+      .heroTittle {
+        top: 200px;
+        h2 {
+          font-size: 280px;
+          -webkit-text-stroke-width: 18px;
+        }
+      }
+    }
+    .heroImg {
+      img {
+        display: none;
+      }
+    }
+    .heroShape {
+      img {
+        width: 463px;
+        height: 411px;
+      }
+    }
+  }
+
+  .slider {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .container {
+      .row {
+        .sectionTittle {
+          span {
+            font-size: 90px;
+          }
+          h2 {
+            font-size: 36px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .cardBox {
+      .card {
+        padding: 30px 15px;
+        max-width: 260px;
+        .jobIcon {
+          width: 45px;
+          height: 45px;
+        }
+        .cardTittle h5 {
+          font-size: 20px;
+        }
+        .productBtn {
+          padding: 10px 25px;
+        }
+      }
+    }
+  }
+
+  .about {
+    padding: 130px 0;
+    .container {
+      @include container(90%);
+      .row {
+        flex-direction: column;
+        justify-content: center;
+        gap: 80px;
+        .aboutImg {
+          max-width: 100%;
+          width: 80%;
+        }
+        .aboutCap {
+          padding-top: 70px;
+          max-width: 100%;
+          h2 {
+            font-size: 36px;
+            font-weight: 700;
+          }
+          p {
+            font-size: 18px;
+          }
+          .btn {
+            padding: 22px 39px;
+            font-size: 13px;
+          }
+        }
+      }
+      .aboutTittle {
+        h2 {
+          font-size: 180px;
+        }
+      }
+    }
+  }
+
+  .category {
+    padding-top: 70px;
+    .container {
+      @include container(90%);
+      .row {
+        .sectionTittle {
+          h2 {
+            font-size: 36px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+        .cardWrapper {
+          grid-template-columns: repeat(2, 1fr);
+          .card {
+            max-width: 280px;
+            padding: 30px 28px 28px 28px;
+            .cardIcon {
+              width: 45px;
+              height: 45px;
+            }
+            .cardDescription {
+              font-size: 16px;
+              br {
+                display: none;
+              }
+            }
+            .btnCard {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 70px 0;
+    .container {
+      @include container(90%);
+      .row {
+        .wrapper {
+          padding: 90px 20px 100px 10px;
+          .testiWrapper {
+            padding: 18px 48px;
+            .testiCap p {
+              font-size: 22px;
+            }
+          }
+          .testiFounder {
+            .testiText {
+              span {
+                font-size: 18px;
+              }
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+          .tShape img {
+            width: 270px;
+            height: 190px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 576px - 768px
+@media (min-width: 576px) and (max-width: 768px) {
+  .hero {
+    padding-bottom: 100px;
+    .container {
+      @include container(90%);
+      .row {
+        padding-top: 100px;
+
+        .heroCap {
+          span {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+          h1 {
+            font-size: 33px;
+            margin-bottom: 20px;
+            br {
+              display: none;
+            }
+          }
+          .heroBtnGroup {
+            .btnOne,
+            .btnTwo {
+              padding: 21px 42px;
+              font-size: 16px;
+            }
+            .btnTwo {
+              margin-top: 10px;
+              margin-left: 0px;
+            }
+          }
+        }
+      }
+      
+    }
+    .heroImg {
+      img {
+        display: none;
+      }
+    }
+    .heroShape {
+      display: none;
+    }
+    .heroShapeMini {
+      display: none;
+    }
+  }
+
+  .slider {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container {
+      .row {
+        .sectionTittle {
+          span {
+            font-size: 70px;
+          }
+          h2 {
+            font-size: 28px;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    .cardBox {
+      .card {
+        padding: 20px 10px;
+        max-width: 240px;
+        .jobIcon {
+          width: 40px;
+          height: 40px;
+        }
+        .cardTittle h5 {
+          font-size: 18px;
+        }
+        .productBtn {
+          padding: 8px 20px;
+        }
+      }
+    }
+  }
+
+  .about {
+    padding: 100px 0;
+    .container {
+      @include container(90%);
+      .row {
+        flex-direction: column;
+        gap: 80px;
+        .aboutImg {
+          max-width: 100%;
+        }
+        .aboutCap {
+          max-width: 100%;
+          h2 {
+            font-size: 28px;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.8;
+          }
+          .btn {
+            padding: 22px 39px;
+            font-size: 16px;
+          }
+        }
+      }
+      .aboutTittle {
+        h2 {
+          font-size: 150px;
+        }
+      }
+    }
+  }
+
+  .category {
+    padding-top: 50px;
+    .container {
+      @include container(90%);
+      .row {
+        .sectionTittle {
+          h2 {
+            font-size: 46px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 30px;
+          }
+        }
+        .cardWrapper {
+          grid-template-columns: repeat(2, 1fr);
+          .card {
+            max-width: 260px;
+            padding: 25px 15px;
+            .cardIcon {
+              width: 40px;
+              height: 40px;
+            }
+            .cardDescription {
+              font-size: 14px;
+            }
+            .btnCard {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 50px 0;
+    .container {
+      @include container(90%);
+      .row {
+        .wrapper {
+          padding: 25px 80px 20px;
+          .testiWrapper {
+            padding: 15px 20px;
+            .testiCap p {
+              font-size: 18px;
+            }
+          }
+          .testiFounder {
+            .testiText {
+              span {
+                font-size: 16px;
+              }
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+          .tShape img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 425px - 576px
+@media (min-width: 425px) and (max-width: 576px) {
+  .hero {
+    padding-bottom: 100px;
+    .container {
+      @include container(90%);
+      .row {
+        padding-top: 100px;
+
+        .heroCap {
+          span {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+          h1 {
+            font-size: 33px;
+            margin-bottom: 20px;
+            br {
+              display: none;
+            }
+          }
+          .heroBtnGroup {
+            .btnOne,
+            .btnTwo {
+              padding: 21px 42px;
+              font-size: 16px;
+            }
+            .btnTwo {
+              margin-top: 10px;
+              margin-left: 0px;
+            }
+          }
+        }
+      }
+    }
+    .heroImg {
+      img {
+        display: none;
+      }
+    }
+    .heroShape {
+      display: none;
+    }
+    .heroShapeMini {
+      display: none;
+    }
+  }
+
+  .slider {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container {
+      .row {
+        .sectionTittle {
+          span {
+            font-size: 70px;
+          }
+          h2 {
+            font-size: 28px;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    .cardBox {
+      .card {
+        padding: 20px 10px;
+        max-width: 240px;
+        .jobIcon {
+          width: 40px;
+          height: 40px;
+        }
+        .cardTittle h5 {
+          font-size: 18px;
+        }
+        .productBtn {
+          padding: 8px 20px;
+        }
+      }
+    }
+  }
+
+  .about {
+    padding: 100px 0;
+    .container {
+      @include container(90%);
+      .row {
+        flex-direction: column;
+        gap: 80px;
+        .aboutImg {
+          max-width: 100%;
+        }
+        .aboutCap {
+          max-width: 100%;
+          h2 {
+            font-size: 28px;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.8;
+          }
+          .btn {
+            padding: 22px 39px;
+            font-size: 16px;
+          }
+        }
+      }
+      .aboutTittle {
+        h2 {
+          font-size: 150px;
+        }
+      }
+    }
+  }
+
+  .category {
+    padding-top: 50px;
+    .container {
+      @include container(90%);
+      .row {
+        .sectionTittle {
+          h2 {
+            font-size: 46px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 30px;
+          }
+        }
+        .cardWrapper {
+          grid-template-columns: repeat(1, 1fr);
+          .card {
+            max-width: 260px;
+            padding: 25px 15px;
+            .cardIcon {
+              width: 40px;
+              height: 40px;
+            }
+            .cardDescription {
+              font-size: 14px;
+            }
+            .btnCard {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 50px 0;
+    .container {
+      @include container(90%);
+      .row {
+        .wrapper {
+          padding: 25px 80px 20px;
+          .testiWrapper {
+            padding: 15px 20px;
+            .testiCap p {
+              font-size: 18px;
+            }
+          }
+          .testiFounder {
+            .testiText {
+              span {
+                font-size: 16px;
+              }
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+          .tShape img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 375px - 425px
+@media (min-width: 375px) and (max-width: 425px) {
+  .hero {
+    padding-bottom: 80px;
+    .container {
+      .row {
+        padding-top: 80px;
+
+        .heroCap {
+          padding-top: 30px;
+          span {
+            font-size: 18px;
+            margin-bottom: 8px;
+          }
+          h1 {
+            font-size: 33px;
+            margin-bottom: 16px;
+            br {
+              display: none;
+            }
+          }
+          .heroBtnGroup {
+            .btnOne,
+            .btnTwo {
+              padding: 21px 42px;
+              font-size: 16px;
+            }
+            .btnTwo {
+              margin-top: 10px;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      .heroTittle {
+        top: 150px;
+        h2 {
+          font-size: 150px;
+          -webkit-text-stroke-width: 10px;
+        }
+      }
+    }
+    .heroImg {
+      img {
+        display: none;
+      }
+    }
+    .heroShape {
+      img {
+        display: none !important;
+      }
+    }
+    .heroShapeMini {
+      display: none;
+    }
+  }
+
+  .slider {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .container {
+      .row {
+        .sectionTittle {
+          span {
+            font-size: 60px;
+          }
+          h2 {
+            font-size: 24px;
+          }
+          p {
+            font-size: 16px;
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .cardBox {
+      .card {
+        padding: 15px 8px;
+        max-width: 200px;
+        .jobIcon {
+          width: 35px;
+          height: 35px;
+        }
+        .cardTittle h5 {
+          font-size: 16px;
+        }
+        .productBtn {
+          padding: 6px 16px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .about {
+    padding: 80px 0;
+    .container {
+      .row {
+        flex-direction: column;
+        gap: 60px;
+        .aboutImg {
+          max-width: 100%;
+        }
+        .aboutCap {
+          max-width: 100%;
+          h2 {
+            font-size: 28px;
+          }
+          p {
+            font-size: 16px;
+          }
+          .btn {
+            padding: 22px 39px;
+            font-size: 16px;
+          }
+        }
+      }
+      .aboutTittle {
+        h2 {
+          font-size: 120px;
+        }
+      }
+    }
+  }
+
+  .category {
+    padding-top: 40px;
+    .container {
+      .row {
+        .sectionTittle {
+          h2 {
+            font-size: 28px;
+            br {
+              display: none;
+            }
+          }
+          p {
+            font-size: 16px;
+            br {
+              display: none;
+            }
+          }
+        }
+        .cardWrapper {
+          grid-template-columns: repeat(1, 1fr);
+          .card {
+            max-width: 100%;
+            width: 100%;
+            padding: 20px 10px;
+            .cardIcon {
+              width: 35px;
+              height: 35px;
+            }
+            .cardDescription {
+              font-size: 12px;
+            }
+            .btnCard {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 40px 0;
+    .container {
+      .row {
+        .wrapper {
+          padding: 40px 10px 40px 10px;
+          .testiWrapper {
+            padding: 12px 18px;
+            .testiCap {
+              p {
+                font-size: 16px;
+              }
+              img {
+                display: none;
+              }
+            }
+          }
+          .testiFounder {
+            .testiText {
+              span {
+                font-size: 14px;
+              }
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+          .tShape img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 320px - 375px
+@media (min-width: 320px) and (max-width: 375px) {
+  .hero {
+    padding-bottom: 100px;
+    .container {
+      @include container(100%);
+      .row {
+        padding-top: 100px;
+        .heroCap {
+          padding-top: 30px;
+          span {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+          h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+          }
+          .heroBtnGroup {
+            .btnOne,
+            .btnTwo {
+              font-size: 16px;
+              padding: 21px 42px;
+              margin-left: 0;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    .heroImg img {
+      display: none;
+    }
+    .heroShapeMini {
+      display: none;
+    }
+    .heroShape {
+      display: none;
+    }
+  }
+
+  .slider {
+    padding: 50px 0;
+    .sectionTittle {
+      span {
+        font-size: 66px !important;
+      }
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+    .card {
+      padding: 20px;
+      max-width: 100%;
+      .jobIcon {
+        width: 40px;
+        height: 40px;
+      }
+      .cardTittle h5 {
+        font-size: 18px;
+      }
+      .productBtn {
+        font-size: 12px;
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  .about {
+    padding: 80px 0;
+    .container {
+      @include container(100%);
+      .row {
+        gap: 20px;
+        flex-direction: column;
+        .aboutImg {
+          max-width: 100%;
+        }
+        .aboutCap {
+          max-width: 100%;
+          h2 {
+            font-size: 32px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 1.6;
+          }
+          .btn {
+            padding: 12px 20px;
+          }
+        }
+      }
+      .aboutTittle h2 {
+        font-size: 150px;
+        -webkit-text-stroke-width: 1px;
+      }
+    }
+  }
+
+  .category {
+    padding-top: 50px;
+    .container{
+      @include container(100%);
+      .row{
+        .sectionTittle {
+          span{
+            font-size: 66px !important;
+          }
+          h2 {
+            font-size: 28px;
+          }
+        }
+        .cardWrapper {
+          grid-template-columns: 1fr !important;
+          .card {
+            padding: 20px;
+            .cardIcon {
+              width: 40px;
+              height: 40px;
+            }
+            h5 {
+              font-size: 18px;
+            }
+            .cardDescription {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 50px 0;
+    .wrapper {
+      padding: 11px 16px 0 18px !important;
+      p {
+        font-size: 12px !important;
+      }
+      .testiFounder .testiText span {
+        font-size: 14px !important;
+      }
+      .tShape img {
+        display: none;
+      }
+    }
+  }
+}
+
+// ! 280px - 320px
+@media (min-width: 280px) and (max-width: 320px) {
+  .hero {
+    padding-bottom: 100px;
+    .container {
+      @include container(100%);
+      .row {
+        padding-top: 100px;
+        .heroCap {
+          padding-top: 30px;
+          span {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+          h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+          }
+          .heroBtnGroup {
+            .btnOne,
+            .btnTwo {
+              font-size: 16px;
+              padding: 21px 42px;
+              margin-left: 0;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    .heroImg img {
+      display: none;
+    }
+    .heroShapeMini {
+      display: none;
+    }
+    .heroShape {
+      display: none;
+    }
+  }
+
+  .slider {
+    padding: 30px 0;
+    .sectionTittle {
+      span {
+        font-size: 60px !important;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 12px;
+        line-height: 1.4;
+      }
+    }
+    .card {
+      padding: 15px;
+      max-width: 100%;
+      .jobIcon {
+        width: 35px;
+        height: 35px;
+      }
+      .cardTittle h5 {
+        font-size: 16px;
+      }
+      .productBtn {
+        font-size: 10px;
+        padding: 8px 15px;
+      }
+    }
+  }
+
+  .about {
+    padding: 80px 0;
+    .container {
+      @include container(100%);
+      .row {
+        gap: 20px;
+        flex-direction: column;
+        .aboutImg {
+          max-width: 100%;
+        }
+        .aboutCap {
+          max-width: 100%;
+          h2 {
+            font-size: 32px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 1.6;
+          }
+          .btn {
+            padding: 12px 20px;
+          }
+        }
+      }
+      .aboutTittle h2 {
+        font-size: 150px;
+        -webkit-text-stroke-width: 1px;
+      }
+    }
+  }
+
+  .category {
+    padding-top: 30px;
+    .sectionTittle h2 {
+      font-size: 24px;
+    }
+    .cardWrapper {
+      grid-template-columns: 1fr !important;
+      .card {
+        padding: 15px;
+        .cardIcon {
+          width: 35px;
+          height: 35px;
+        }
+        h5 {
+          font-size: 16px;
+        }
+        .cardDescription {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 50px 0;
+    .wrapper {
+      padding: 11px 16px 0 18px !important;
+      p {
+        font-size: 12px !important;
+      }
+      .testiFounder .testiText span {
+        font-size: 14px !important;
+      }
+      .tShape img {
+        display: none;
+      }
+    }
+  }
+}
+

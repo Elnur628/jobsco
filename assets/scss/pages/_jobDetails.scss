@@ -1,0 +1,1003 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// * Hero start
+
+.softwareHero {
+  background-color: $color-bg-gray;
+  width: 100%;
+  .container {
+    .secCap {
+      padding: 150px 0;
+      h2 {
+        color: $color-blue;
+        font-size: 50px;
+        display: block;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+// * Hero end
+
+// * Job Details start
+
+.jobDetails {
+  padding: 100px 0;
+  .container {
+    .row {
+      display: grid;
+      grid-template-columns: 65% 30%;
+      gap: 30px;
+      .jobCap {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        .table {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 1px solid #eee;
+          padding: 25px 20px;
+          transition: all 0.3s ease;
+          .imageCap {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .cap {
+              h4 {
+                font-size: 24px;
+                margin-bottom: 10px;
+                font-weight: 400;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                &:hover {
+                  color: #00d363;
+                }
+              }
+              .locDate {
+                display: flex;
+                gap: 50px;
+                span {
+                  margin-bottom: 0;
+                  font-size: 16px;
+                  color: #aab1b7;
+                }
+              }
+            }
+          }
+          .info {
+            display: flex;
+            .apply {
+              .icon {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                button {
+                  @include btn(#00d363);
+                  border: none;
+                  padding: 13px 29px 13px 29px;
+                  cursor: pointer;
+                  border: 1px solid transparent;
+                  transition: all 0.3s ease;
+                  &:hover {
+                    background-color: $color-white;
+                    color: #00d363;
+                    border: 1px solid #00d363;
+                  }
+                }
+                i {
+                  width: 40px;
+                  height: 40px;
+                  -webkit-border-radius: 5px;
+                  -moz-border-radius: 5px;
+                  border-radius: 5px;
+                  color: #00d363;
+                  font-size: 14px;
+                  line-height: 40px;
+                  text-align: center;
+                  display: inline-block;
+                  background: #effdf5;
+                  margin-right: 15px;
+                  transition: all 0.3s ease;
+                  cursor: pointer;
+                  &:hover {
+                    background: #00d363;
+                    color: $color-white;
+                  }
+                }
+              }
+              .applyDate {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 15px;
+                p {
+                  margin-bottom: 0;
+                  font-size: 14px;
+                  font-style: italic;
+                  color: #7a838b;
+                }
+              }
+            }
+          }
+        }
+        .jobDesc {
+          margin-top: 30px;
+          .singleWrap {
+            margin-bottom: 30px;
+            h4 {
+              font-size: 20px;
+              font-weight: 500;
+              color: $color-blue;
+              margin-bottom: 25px;
+            }
+            p {
+              color: #7a838b;
+              font-size: 16px;
+              line-height: 28px;
+              font-weight: 400;
+            }
+            .secondDesc {
+              margin-top: 15px;
+            }
+            ul {
+              li {
+                font-size: 16px;
+                line-height: 32px;
+                color: #7a838b;
+                font-weight: 400;
+                position: relative;
+                padding-left: 25px;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 12px;
+                  left: 0;
+                  width: 7px;
+                  height: 7px;
+                  background: #7a838b;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          h4 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: $color-blue;
+          }
+          .info {
+            display: flex;
+            gap: 15px;
+          }
+          input {
+            height: 60px;
+            border: 1px solid #e8e8e8;
+            width: 100%;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            padding-left: 20px;
+            margin-bottom: 20px;
+          }
+          textarea {
+            padding: 20px;
+            font-size: 14px;
+            height: 150px;
+            resize: none;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+          }
+          button {
+            @include btn(#00d363);
+            padding: 13px 29px 13px 29px;
+            border: none;
+            transition: all 0.3s ease;
+            &:hover {
+              background-color: $color-white;
+              color: #00d363;
+              border: 1px solid #00d363;
+            }
+          }
+        }
+      }
+      .jobSummery {
+        .tittle {
+          border-bottom: 1px solid #eaeaea;
+          padding: 40px;
+          h3 {
+            font-size: 24px;
+            color: $color-blue;
+            font-weight: 400;
+          }
+        }
+        .jobContent {
+          padding: 40px;
+          ul {
+            li {
+              font-size: 16px;
+              font-weight: 400;
+              color: #aab1b7;
+              line-height: 38px;
+              padding-left: 18px;
+              position: relative;
+              span {
+                color: $color-blue;
+              }
+              &::before {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border: 1px solid #aab1b7;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                left: 0;
+                content: "";
+                top: 16px;
+              }
+            }
+          }
+        }
+        .jobShare {
+          display: flex;
+          background: #fff;
+          margin: 30px 0;
+          padding: 20px;
+          span {
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-blue;
+            margin-right: 20px;
+          }
+          ul {
+            li {
+              display: inline-block;
+              margin-right: 10px;
+              a {
+                font-size: 16px;
+                color: #d5d5d5;
+              }
+            }
+          }
+        }
+
+        .jobMap {
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+// * Job Details end
+
+// ! Responsive
+
+// ! 992px - 1199px
+@media (min-width: 992px) and (max-width: 1199px) { 
+  .softwareHero {
+    .container {
+      @include container(90%);
+      .secCap {
+        padding: 120px 0;
+        h2 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+  .jobDetails {
+    padding: 80px 0;
+    .container {
+      @include container(90%);
+      .row {
+        gap: 20px;
+        grid-template-columns: 60% 35%;
+        .jobCap {
+          .table {
+            padding: 20px 15px;
+            .imageCap {
+              gap: 10px;
+              .cap {
+                h4 {
+                  font-size: 20px;
+                }
+                .locDate {
+                  gap: 30px;
+                  span {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+            .info {
+              .apply {
+                .icon {
+                  button {
+                    padding: 12px 25px;
+                  }
+                  i {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 12px;
+                  }
+                }
+                .applyDate {
+                  p {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+          .jobDesc {
+            margin-top: 20px;
+            .singleWrap {
+              h4 {
+                font-size: 18px;
+                margin-bottom: 20px;
+              }
+              p {
+                font-size: 14px;
+                line-height: 24px;
+              }
+              ul {
+                li {
+                  font-size: 14px;
+                  line-height: 28px;
+                }
+              }
+            }
+          }
+          form {
+            h4 {
+              font-size: 22px;
+              margin-bottom: 25px;
+            }
+            input {
+              height: 50px;
+              padding-left: 15px;
+            }
+            textarea {
+              font-size: 13px;
+              height: 120px;
+              padding: 15px;
+            }
+            button {
+              padding: 12px 25px;
+            }
+          }
+        }
+        .jobSummery {
+          .tittle {
+            padding: 30px;
+            h3 {
+              font-size: 22px;
+            }
+          }
+          .jobContent {
+            padding: 30px;
+            ul {
+              li {
+                font-size: 15px;
+                line-height: 34px;
+                padding-left: 15px;
+              }
+            }
+          }
+          .jobShare {
+            padding: 15px;
+            span {
+              font-size: 15px;
+              margin-right: 15px;
+            }
+            ul {
+              li {
+                a {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 768px - 992px
+@media (min-width: 768px) and (max-width: 992px) {
+  .softwareHero {
+    .container {
+      @include container(90%);
+      .secCap {
+        padding: 100px 0 !important;
+        h2 {
+          margin-top: 50px;
+          font-size: 36px;
+        }
+      }
+    }
+  }
+
+  .jobDetails {
+    padding: 70px 0;
+    .container {
+      @include container(90%);
+      .row {
+        gap: 15px;
+        grid-template-columns: 100%;
+        .jobCap {
+          .table {
+            padding: 15px;
+            .imageCap {
+              gap: 8px;
+              .cap {
+                h4 {
+                  font-size: 18px;
+                }
+                .locDate {
+                  gap: 20px;
+                  span {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+            .info {
+              .apply {
+                .icon {
+                  button {
+                    padding: 10px 20px;
+                  }
+                  i {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 12px;
+                  }
+                }
+                .applyDate {
+                  p {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+          .jobDesc {
+            margin-top: 20px;
+            .singleWrap {
+              h4 {
+                font-size: 16px;
+                margin-bottom: 20px;
+              }
+              p {
+                font-size: 14px;
+                line-height: 22px;
+              }
+              ul {
+                li {
+                  font-size: 14px;
+                  line-height: 26px;
+                }
+              }
+            }
+          }
+          form {
+            h4 {
+              font-size: 20px;
+              margin-bottom: 20px;
+            }
+            input {
+              height: 50px;
+              padding-left: 15px;
+            }
+            textarea {
+              font-size: 13px;
+              height: 120px;
+              padding: 15px;
+            }
+            button {
+              padding: 12px 25px;
+            }
+          }
+        }
+        .jobSummery {
+          .tittle {
+            padding: 20px;
+            h3 {
+              font-size: 20px;
+            }
+          }
+          .jobContent {
+            padding: 20px;
+            ul {
+              li {
+                font-size: 14px;
+                line-height: 30px;
+                padding-left: 15px;
+              }
+            }
+          }
+          .jobShare {
+            padding: 15px;
+            span {
+              font-size: 15px;
+              margin-right: 15px;
+            }
+            ul {
+              li {
+                a {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 425px - 768px
+@media (min-width: 425px) and (max-width: 768px) {
+  .softwareHero {
+    .container {
+      @include container(90%);
+      .secCap {
+        padding: 120px 0 80px;
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .jobDetails {
+    padding: 50px 0;
+    .container {
+      @include container(90%);
+      .row {
+        gap: 10px;
+        grid-template-columns: 100%;
+        .jobCap {
+          .table {
+            padding: 10px;
+            .imageCap {
+              gap: 5px;
+              .cap {
+                h4 {
+                  font-size: 16px;
+                }
+                .locDate {
+                  gap: 15px;
+                  span {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+            .info {
+              .apply {
+                .icon {
+                  button {
+                    padding: 8px 18px;
+                    font-size: 14px;
+                  }
+                  i {
+                    width: 28px;
+                    height: 28px;
+                    font-size: 10px;
+                  }
+                }
+                .applyDate {
+                  p {
+                    font-size: 11px;
+                  }
+                }
+              }
+            }
+          }
+          .jobDesc {
+            margin-top: 15px;
+            .singleWrap {
+              h4 {
+                font-size: 15px;
+                margin-bottom: 15px;
+              }
+              p {
+                font-size: 13px;
+                line-height: 20px;
+              }
+              ul {
+                li {
+                  font-size: 13px;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+          form {
+            h4 {
+              font-size: 18px;
+              margin-bottom: 20px;
+            }
+            input {
+              height: 45px;
+              padding-left: 12px;
+            }
+            textarea {
+              font-size: 13px;
+              height: 100px;
+              padding: 12px;
+            }
+            button {
+              padding: 10px 20px;
+            }
+          }
+        }
+        .jobSummery {
+          .tittle {
+            padding: 15px;
+            h3 {
+              font-size: 18px;
+            }
+          }
+          .jobContent {
+            padding: 15px;
+            ul {
+              li {
+                font-size: 13px;
+                line-height: 28px;
+                padding-left: 12px;
+              }
+            }
+          }
+          .jobShare {
+            padding: 12px;
+            span {
+              font-size: 14px;
+              margin-right: 10px;
+            }
+            ul {
+              li {
+                a {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 375px - 425px
+@media (min-width: 375px) and (max-width: 425px) {
+  .softwareHero {
+    .container {
+      @include container(90%);
+      .secCap {
+        padding: 140px 0 60px;
+        h2 {
+          font-size: 24px; 
+        }
+      }
+    }
+  }
+
+  .jobDetails {
+    padding: 40px 0;
+    .container {
+      @include container(90%);
+      .row {
+        gap: 5px;
+        grid-template-columns: 100%; 
+        .jobCap {
+          .table {
+            padding: 8px;
+            .imageCap {
+              gap: 5px;
+              .cap {
+                h4 {
+                  font-size: 14px;
+                }
+                .locDate {
+                  gap: 10px;
+                  span {
+                    font-size: 11px;
+                  }
+                }
+              }
+            }
+            .info {
+              .apply {
+                .icon {
+                  button {
+                    padding: 6px 15px;
+                    font-size: 12px;
+                  }
+                  i {
+                    width: 24px;
+                    height: 24px;
+                    font-size: 10px;
+                  }
+                }
+                .applyDate {
+                  p {
+                    font-size: 10px;
+                  }
+                }
+              }
+            }
+          }
+          .jobDesc {
+            margin-top: 10px;
+            .singleWrap {
+              h4 {
+                font-size: 14px;
+                margin-bottom: 10px;
+              }
+              p {
+                font-size: 12px;
+                line-height: 18px;
+              }
+              ul {
+                li {
+                  font-size: 12px;
+                  line-height: 22px;
+                }
+              }
+            }
+          }
+          form {
+            h4 {
+              font-size: 16px;
+              margin-bottom: 15px;
+            }
+            input {
+              height: 40px;
+              padding-left: 10px;
+            }
+            textarea {
+              font-size: 12px;
+              height: 80px;
+              padding: 10px;
+            }
+            button {
+              padding: 8px 18px;
+            }
+          }
+        }
+        .jobSummery {
+          .tittle {
+            padding: 10px;
+            h3 {
+              font-size: 16px;
+            }
+          }
+          .jobContent {
+            padding: 10px;
+            ul {
+              li {
+                font-size: 12px;
+                line-height: 26px;
+                padding-left: 10px;
+              }
+            }
+          }
+          .jobShare {
+            padding: 10px;
+            span {
+              font-size: 13px;
+              margin-right: 8px;
+            }
+            ul {
+              li {
+                a {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 320px - 375px
+@media (min-width: 320px) and (max-width: 375px) {
+  .jobDetails {
+    padding: 75px 0;
+
+    .container {
+      .row {
+        display: block; 
+        
+        .jobCap, .jobSummery {
+          width: 100%;
+          padding: 0 15px;
+        }
+        
+        .jobCap {
+          .table {
+            flex-direction: column;
+            justify-content: start;
+            padding: 20px 0;
+            gap: 20px;
+            .imageCap{
+              flex-direction: column;
+              img{
+                margin-left: 0;
+              }
+              .cap{
+                flex-direction: column;
+                gap: 5px;
+                .locDate{
+                  flex-direction: column;
+                  gap: 5px;
+                }
+              }
+            }
+          }
+
+          .jobDesc {
+            margin-top: 25px;
+            
+
+            .singleWrap {
+              h4 {
+                font-size: 20px;
+                margin-bottom: 20px;
+              }
+              p, ul li {
+                font-size: 15px;
+                line-height: 26px;
+              }
+            }
+          }
+
+          form {
+            h4 {
+              font-size: 22px;
+            }
+            input, textarea {
+              font-size: 15px;
+              padding: 12px;
+            }
+            button {
+              font-size: 18px;
+              padding: 12px 25px;
+            }
+          }
+        }
+
+        .jobSummery {
+          .tittle {
+            padding: 30px;
+            h3 {
+              font-size: 22px;
+            }
+          }
+
+          .jobContent, .jobShare {
+            padding: 30px;
+          }
+          
+          .jobContent ul li {
+            font-size: 15px;
+            line-height: 30px;
+            padding-left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 280px - 320px
+@media (min-width: 280px) and (max-width: 320px) {
+  .jobDetails {
+    padding: 50px 0;
+    
+    .container {
+      .row {
+        display: block; 
+        
+        .jobCap, .jobSummery {
+          width: 100%; 
+          padding: 0 15px;
+        }
+        
+        .jobCap {
+          .table {
+            flex-direction: column;
+            justify-content: start;
+            padding: 20px 0;
+            gap: 20px;
+            .imageCap{
+              flex-direction: column;
+              img{
+                margin-left: 0;
+              }
+              .cap{
+                flex-direction: column;
+                gap: 5px;
+                .locDate{
+                  flex-direction: column;
+                  gap: 5px;
+                }
+              }
+            }
+          }
+
+          
+          .jobDesc {
+            margin-top: 20px;
+
+            .singleWrap {
+              h4 {
+                font-size: 18px;
+                margin-bottom: 20px;
+              }
+              p, ul li {
+                font-size: 14px;
+                line-height: 24px;
+              }
+            }
+          }
+          
+          form {
+            h4 {
+              font-size: 20px;
+            }
+            input, textarea {
+              font-size: 14px;
+              padding: 10px;
+            }
+            button {
+              font-size: 16px;
+              padding: 10px 20px;
+            }
+          }
+        }
+        
+        .jobSummery {
+          .tittle {
+            padding: 20px;
+            h3 {
+              font-size: 20px;
+            }
+          }
+
+          .jobContent, .jobShare {
+            padding: 20px;
+          }
+          
+          .jobContent ul li {
+            font-size: 14px;
+            line-height: 28px;
+            padding-left: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,419 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.signUp {
+  padding: 200px 0;
+  .container {
+    .row {
+      display: flex;
+      justify-content: center;
+      .signUpCard {
+        width: 50%;
+        background: #fff;
+        padding: 33px 60px 50px 50px;
+        box-shadow: 0px 10px 30px 0px rgba(13, 12, 13, 0.2);
+        .tittle {
+          text-align: center;
+          span {
+            color: #140c40;
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: block;
+            text-transform: capitalize;
+          }
+          p {
+            font-family: "DM Sans", sans-serif;
+            color: #6d6e8d;
+            font-size: 16px;
+            line-height: 30px;
+            margin-bottom: 15px;
+            font-weight: normal;
+          }
+        }
+        .inputBox {
+          padding-top: 35px;
+          padding-bottom: 25px;
+          .singleInput {
+            label {
+              display: block;
+              font-size: 17px;
+              margin-bottom: 6px;
+              color: #140c40;
+              text-transform: capitalize;
+              font-weight: 500;
+              text-align: left;
+            }
+            input {
+              border: 1px solid #c9c9c9;
+              width: 100%;
+              height: 50px;
+              margin-bottom: 20px;
+              padding: 0 25px;
+              color: #000;
+            }
+          }
+
+          .signUpFooter {
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p {
+              font-family: "DM Sans", sans-serif;
+              color: #6d6e8d;
+              font-size: 16px;
+              line-height: 30px;
+              margin-bottom: 15px;
+              font-weight: normal;
+              a {
+                color: #000dff;
+              }
+            }
+            button {
+              @include btn(#000dff);
+              border: 1px solid transparent;
+              cursor: pointer;
+              &:hover {
+                background-color: $color-green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! Responsive
+
+// ! 992px - 1199px
+@media (min-width: 992px) and (max-width: 1199px) {
+  .signUp {
+    padding: 150px 0;
+
+    .container {
+      .row {
+        .signUpCard {
+          width: 60%;
+          padding: 30px 40px 45px 40px;
+
+          .tittle {
+            span {
+              font-size: 26px;
+              margin-bottom: 12px;
+            }
+            p {
+              font-size: 14px;
+              line-height: 28px;
+            }
+          }
+
+          .inputBox {
+            padding-top: 30px;
+            padding-bottom: 20px;
+
+            .singleInput {
+              label {
+                font-size: 16px;
+              }
+              input {
+                height: 45px;
+                padding: 0 20px;
+              }
+            }
+
+            .signUpFooter {
+              padding-top: 30px;
+
+              p {
+                font-size: 14px;
+                line-height: 28px;
+              }
+
+              button {
+                padding: 10px 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 768px - 992px
+@media (min-width: 768px) and (max-width: 992px) {
+  .signUp {
+    padding: 120px 0;
+
+    .container {
+      .row {
+        .signUpCard {
+          width: 70%;
+          padding: 25px 30px 40px 30px;
+
+          .tittle {
+            span {
+              font-size: 24px;
+              margin-bottom: 10px;
+            }
+            p {
+              font-size: 14px;
+              line-height: 26px;
+            }
+          }
+
+          .inputBox {
+            padding-top: 25px;
+            padding-bottom: 15px;
+
+            .singleInput {
+              label {
+                font-size: 15px;
+              }
+              input {
+                height: 45px;
+                padding: 0 15px;
+              }
+            }
+
+            .signUpFooter {
+              padding-top: 30px;
+
+              p {
+                font-size: 14px;
+                line-height: 26px;
+              }
+
+              button {
+                padding: 10px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 425px - 768px
+@media (min-width: 425px) and (max-width: 768px) {
+  .signUp {
+    padding: 150px 0;
+    .container {
+      .row {
+        .signUpCard {
+          width: 80%;
+          padding: 20px 40px 40px 40px;
+          .tittle {
+            span {
+              font-size: 26px;
+              margin-bottom: 12px;
+            }
+            p {
+              font-size: 14px;
+              line-height: 26px;
+              margin-bottom: 10px;
+            }
+          }
+          .inputBox {
+            padding-top: 25px;
+            padding-bottom: 20px;
+            .singleInput {
+              label {
+                font-size: 16px;
+                margin-bottom: 5px;
+              }
+              input {
+                height: 45px;
+                margin-bottom: 15px;
+                padding: 0 20px;
+              }
+            }
+
+            .signUpFooter {
+              padding-top: 30px;
+              flex-direction: column;
+              align-items: flex-start;
+              p {
+                font-size: 14px;
+                line-height: 25px;
+                margin-bottom: 10px;
+              }
+              button {
+                margin-top: 15px;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 375px - 425px
+@media (min-width: 375px) and (max-width: 425px) {
+  .signUp {
+    padding: 100px 0;
+    .container {
+      .row {
+        .signUpCard {
+          width: 90%;
+          padding: 20px 30px 30px 30px;
+          .tittle {
+            span {
+              font-size: 24px;
+              margin-bottom: 10px;
+            }
+            p {
+              font-size: 13px;
+              line-height: 24px;
+              margin-bottom: 8px;
+            }
+          }
+          .inputBox {
+            padding-top: 20px;
+            padding-bottom: 15px;
+            .singleInput {
+              label {
+                font-size: 15px;
+                margin-bottom: 4px;
+              }
+              input {
+                height: 40px;
+                margin-bottom: 12px;
+                padding: 0 18px;
+              }
+            }
+
+            .signUpFooter {
+              padding-top: 20px;
+              flex-direction: column;
+              align-items: flex-start;
+              p {
+                font-size: 13px;
+                line-height: 22px;
+                margin-bottom: 8px;
+              }
+              button {
+                margin-top: 10px;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 320px - 375px
+@media (min-width: 320px) and (max-width: 375px) {
+  .signUp {
+    padding: 80px 0;
+    .container {
+      .row {
+        .signUpCard {
+          width: 95%;
+          padding: 15px 20px 25px 20px;
+          .tittle {
+            span {
+              font-size: 22px;
+              margin-bottom: 8px;
+            }
+            p {
+              font-size: 12px;
+              line-height: 22px;
+              margin-bottom: 6px;
+            }
+          }
+          .inputBox {
+            padding-top: 15px;
+            padding-bottom: 10px;
+            .singleInput {
+              label {
+                font-size: 14px;
+                margin-bottom: 3px;
+              }
+              input {
+                height: 38px;
+                margin-bottom: 10px;
+                padding: 0 15px;
+              }
+            }
+
+            .signUpFooter {
+              padding-top: 15px;
+              flex-direction: column;
+              align-items: flex-start;
+              p {
+                font-size: 12px;
+                line-height: 20px;
+                margin-bottom: 6px;
+              }
+              button {
+                margin-top: 10px;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 280px - 320px
+@media (min-width: 280px) and (max-width: 320px) {
+  .signUp {
+    padding: 100px 0; 
+    .container {
+      .row {
+        .signUpCard {
+          width: 90%; 
+          padding: 20px; 
+          .tittle {
+            span {
+              font-size: 24px; 
+              margin-bottom: 10px;
+            }
+            p {
+              font-size: 14px; 
+              line-height: 24px;
+            }
+          }
+          .inputBox {
+            padding-top: 25px;
+            padding-bottom: 15px;
+            .singleInput {
+              label {
+                font-size: 15px; 
+                margin-bottom: 4px;
+              }
+              input {
+                height: 40px; 
+                padding: 0 15px; 
+              }
+            }
+
+            .signUpFooter {
+              padding-top: 20px;
+              flex-direction: column; 
+              align-items: flex-start;
+              p {
+                font-size: 14px; 
+                margin-bottom: 10px;
+              }
+              button {
+                width: 100%; 
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

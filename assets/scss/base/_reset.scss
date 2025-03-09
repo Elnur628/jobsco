@@ -1,0 +1,29 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden !important;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+}
+
+ul{
+    list-style: none;
+    color: $color-black;
+}
+
+.container {
+  @include container(1200px);
+}
+
+

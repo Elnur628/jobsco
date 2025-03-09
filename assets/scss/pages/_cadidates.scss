@@ -1,0 +1,322 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// * Hero start
+
+.candidatesHero {
+  background-color: $color-bg-gray;
+  width: 100%;
+  .container {
+    .secCap {
+      padding: 150px 0;
+      h2 {
+        color: $color-blue;
+        font-size: 50px;
+        display: block;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+// * Hero end
+
+// * User start
+
+.user {
+    padding: 100px 0;
+    background: #FBFBFB;
+  .container {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      .userCard {
+        background: #fff;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        padding: 35px 45px;
+        text-align: center;
+        .image {
+          width: 110px;
+          height: 110px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          margin: auto;
+        }
+        h4 {
+          font-size: 20px;
+          font-weight: 400;
+          color: #001d38;
+          margin-top: 24px;
+          margin-bottom: 6px;
+          transition: all 0.3s ease-out 0s;
+         a{
+            transition: all 0.3s ease-out 0s;
+            &:hover{
+                color: #00d363;
+              }
+         }
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          color: #aab1b7;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// * User end
+
+// ! Responsive
+
+// ! 992px - 1199px
+@media (min-width: 992px) and (max-width: 1199px) {
+  .candidatesHero {
+    .container {
+      @include container(90%);
+      .secCap {
+        padding: 100px 0; 
+        h2 {
+          font-size: 45px; 
+        }
+      }
+    }
+  }
+
+  .user {
+    padding: 90px 0;
+    .container {
+      @include container(90%);
+      .row {
+        grid-template-columns: repeat(3, 1fr); 
+        .userCard {
+          padding: 30px 40px;
+          .image {
+            width: 100px;
+            height: 100px;
+          }
+          h4 {
+            font-size: 19px;
+            margin-top: 22px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 768px - 992px
+@media (min-width: 768px) and (max-width: 992px) {
+  .candidatesHero {
+    .container {
+      @include container(95%);
+      .secCap {
+        padding: 130px 0 80px;
+        h2 {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+
+  .user {
+    padding: 80px 0; 
+    .container {
+      @include container(95%);
+      .row {
+        grid-template-columns: repeat(2, 1fr); 
+        .userCard {
+          padding: 25px 35px; 
+          .image {
+            width: 90px; 
+            height: 90px;
+          }
+          h4 {
+            font-size: 18px; 
+            margin-top: 20px;
+          }
+          p {
+            font-size: 14px; 
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 425px - 768px
+@media (min-width: 425px) and (max-width: 768px) {
+  .candidatesHero {
+    .container {
+      @include container(95%);
+      .secCap {
+        padding: 130px 0 80px;
+        h2 {
+          font-size: 30px;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+
+  .user {
+    padding: 70px 0; 
+    .container {
+      @include container(95%);
+      .row {
+        grid-template-columns: repeat(2, 1fr); 
+        .userCard {
+          padding: 20px 30px; 
+          .image {
+            width: 80px; 
+            height: 80px;
+          }
+          h4 {
+            font-size: 17px; 
+            margin-top: 35px;
+            margin-left: 25px;
+          }
+          p {
+            font-size: 14px; 
+            margin-left: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 375px - 425px
+@media (min-width: 375px) and (max-width: 425px) {
+  .candidatesHero {
+    .container {
+      @include container(95%);
+      .secCap {
+        padding: 130px 0 80px;
+        h2 {
+          font-size: 26px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  .user {
+    padding: 60px 0;
+    .container {
+      @include container(95%);
+      .row {
+        grid-template-columns: 1fr; 
+        .userCard {
+          padding: 15px 25px; 
+          .image {
+            width: 70px; 
+            height: 70px;
+          }
+          h4 {
+            font-size: 16px; 
+            margin-top: 35px;
+            margin-left: 25px;
+          }
+          p {
+            font-size: 13px; 
+            margin-left: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 320px - 375px
+@media (min-width: 320px) and (max-width: 375px) {
+  .candidatesHero {
+    .container {
+      @include container(95%);
+      .secCap {
+        padding: 130px 0 80px;
+        h2 {
+          font-size: 26px; 
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  .user {
+    padding: 50px 0;
+    .container {
+      @include container(95%);
+      .row {
+        grid-template-columns: 1fr; 
+        .userCard {
+          padding: 15px 20px; 
+          .image {
+            width: 65px; 
+            height: 65px;
+          }
+          h4 {
+            font-size: 15px; 
+            margin-top: 50px;
+            margin-left: 45px;
+          }
+          p {
+            font-size: 12px; 
+            margin-left: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 280px - 320px
+@media (min-width: 280px) and (max-width: 320px) {
+  .candidatesHero {
+    .container {
+      @include container(100%);
+      .secCap {
+        padding: 130px 0 80px;
+        h2 {
+          font-size: 26px; 
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  .user {
+    padding: 40px 0; 
+    .container {
+      @include container(100%);
+      .row {
+        grid-template-columns: 1fr; 
+        .userCard {
+          padding: 10px 15px; 
+          .image {
+            width: 60px; 
+            height: 60px;
+          }
+          h4 {
+            font-size: 14px; 
+            margin-top: 50px;
+            margin-left: 50px;
+          }
+          p {
+            font-size: 11px; 
+            margin-left: 50px;
+          }
+        }
+      }
+    }
+  }
+}

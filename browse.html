@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--* Fontawsome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- * Css Link -->
+    <link rel="stylesheet" href="./assets/scss/index.css" />
+    <title>JobSco-Browse Job</title>
+  </head>
+  <body>
+    <!-- * Header start -->
+
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="leftContent">
+            <div class="logo">
+              <a href="index.html"
+                ><img src="./assets/images/home/logo.png.webp" alt="logo"
+              /></a>
+            </div>
+            <nav class="navBar">
+              <ul class="navList">
+                <li class="navItem"><a href="./index.html">home</a></li>
+                <li class="navItem"><a href="./browse.html">browse job</a></li>
+                <li class="navItem dropdown">
+                  <a href="#">page</a>
+                  <ul class="dropdown-content">
+                    <li class="dropItem">
+                      <a href="#" class="dropLink">Blog</a>
+                    </li>
+                    <li class="dropItem">
+                      <a href="./candidates.html" class="dropLink"
+                        >Candidates</a
+                      >
+                    </li>
+                    <li class="dropItem">
+                      <a href="./jobDetails.html" class="dropLink"
+                        >Job Details</a
+                      >
+                    </li>
+                    <li class="dropItem">
+                      <a href="#" class="dropLink">Blog Details</a>
+                    </li>
+                    <li class="dropItem">
+                      <a href="#" class="dropLink">Element</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navItem"><a href="./contact.html">contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="buttonGroup">
+            <a href="#" class="btnSuccess">post a job</a>
+            <a href="./logIn.html" class="btnPrimary">log in</a>
+          </div>
+        </div>
+        <div class="mobileMenu">
+          <a href="#" class="btn">MENU <i class="fa-solid fa-bars"></i></a>
+        </div>
+        <div class="mobileBar">
+          <ul class="mobileList">
+            <li><a href="./index.html">home</a></li>
+            <li><a href="">Browse Job</a></li>
+            <li><a href="">page</a></li>
+            <li><a href="">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- * Header end -->
+
+    <main>
+      <!-- * Browse Hero section start -->
+
+      <section class="browsHero">
+        <div class="container">
+          <div class="secCap">
+            <h2>Browse Jobs</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Browse Hero section end -->
+
+      <!-- * Job section start -->
+
+      <section class="job">
+        <div class="container">
+          <div class="row">
+            <div class="filterWrapper">
+              <h3>Filter</h3>
+              <form>
+                <input type="text" placeholder="Search keyword" />
+                <select name="loc" id="loc">
+                  <option data-display="Location">Location</option>
+                  <option value="1">Rangpur</option>
+                  <option value="2">Dhaka</option>
+                </select>
+                <select name="category" id="category">
+                  <option data-display="Category">Category</option>
+                  <option value="1">Category 1</option>
+                  <option value="2">Category 2</option>
+                </select>
+                <select name="experience" id="experience">
+                  <option data-display="Experience">Experience</option>
+                  <option value="1">Experience 1</option>
+                  <option value="2">Experience 2</option>
+                </select>
+                <select name="job" id="job">
+                  <option data-display="Job type">Job type</option>
+                  <option value="1">full time 1</option>
+                  <option value="2">part time 2</option>
+                </select>
+                <select name="qualification" id="qualification">
+                  <option data-display="Qualification">Qualification</option>
+                  <option value="1">Qualification 1</option>
+                  <option value="2">Qualification 2</option>
+                </select>
+                <select name="gender" id="gender">
+                  <option data-display="Gender">Gender</option>
+                  <option value="1">male</option>
+                  <option value="2">female</option>
+                </select>
+                <button>reset</button>
+              </form>
+            </div>
+            <div class="listeningWrapper">
+              <div class="wrapper">
+                <h3>Job Listing</h3>
+                <form>
+                  <select name="most" id="most">
+                    <option data-display="Most Recent">Most Recent</option>
+                    <option value="1">Marketer</option>
+                    <option value="2">Wordpress</option>
+                    <option value="2">Designer</option>
+                  </select>
+                </form>
+              </div>
+
+              <div class="tableWrapper">
+                <div class="table">
+                  <div class="imageCap">
+                    <img src="./assets/images/browse/1.svg" alt="icon" />
+                    <div class="cap">
+                        <h4>Software Engineer</h4>
+                        <div class="locDate">
+                          <span><i class="fa-solid fa-location-dot"></i> California, USA</span>
+                          <span><i class="fa-regular fa-clock"></i> Part-time</span>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="info">
+                    <div class="apply">
+                      <div class="icon">
+                        <i class="fa-solid fa-heart"></i>
+                        <button>Apply Now</button>
+                      </div>
+                      <div class="applyDate">
+                        <p>Date line: 31 Jan 2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table">
+                    <div class="imageCap">
+                      <img src="./assets/images/browse/2.svg" alt="icon" />
+                      <div class="cap">
+                          <h4>Digital Marketer</h4>
+                          <div class="locDate">
+                            <span><i class="fa-solid fa-location-dot"></i> California, USA</span>
+                            <span><i class="fa-regular fa-clock"></i> Part-time</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                      <div class="apply">
+                        <div class="icon">
+                          <i class="fa-solid fa-heart"></i>
+                          <button>Apply Now</button>
+                        </div>
+                        <div class="applyDate">
+                          <p>Date line: 31 Jan 2020</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table">
+                    <div class="imageCap">
+                      <img src="./assets/images/browse/3.svg" alt="icon" />
+                      <div class="cap">
+                          <h4>Wordpress Developer</h4>
+                          <div class="locDate">
+                            <span><i class="fa-solid fa-location-dot"></i> California, USA</span>
+                            <span><i class="fa-regular fa-clock"></i> Part-time</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                      <div class="apply">
+                        <div class="icon">
+                          <i class="fa-solid fa-heart"></i>
+                          <button>Apply Now</button>
+                        </div>
+                        <div class="applyDate">
+                          <p>Date line: 31 Jan 2020</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table">
+                    <div class="imageCap">
+                      <img src="./assets/images/browse/4.svg" alt="icon" />
+                      <div class="cap">
+                          <h4>Visual Designer</h4>
+                          <div class="locDate">
+                            <span><i class="fa-solid fa-location-dot"></i> California, USA</span>
+                            <span><i class="fa-regular fa-clock"></i> Part-time</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                      <div class="apply">
+                        <div class="icon">
+                          <i class="fa-solid fa-heart"></i>
+                          <button>Apply Now</button>
+                        </div>
+                        <div class="applyDate">
+                          <p>Date line: 31 Jan 2020</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table">
+                    <div class="imageCap">
+                      <img src="./assets/images/browse/5.svg" alt="icon" />
+                      <div class="cap">
+                          <h4>Software Engineer</h4>
+                          <div class="locDate">
+                            <span><i class="fa-solid fa-location-dot"></i> California, USA</span>
+                            <span><i class="fa-regular fa-clock"></i> Part-time</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                      <div class="apply">
+                        <div class="icon">
+                          <i class="fa-solid fa-heart"></i>
+                          <button>Apply Now</button>
+                        </div>
+                        <div class="applyDate">
+                          <p>Date line: 31 Jan 2020</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table">
+                    <div class="imageCap">
+                      <img src="./assets/images/browse/1.svg" alt="icon" />
+                      <div class="cap">
+                          <h4>Software Engineer</h4>
+                          <div class="locDate">
+                            <span><i class="fa-solid fa-location-dot"></i> California, USA</span>
+                            <span><i class="fa-regular fa-clock"></i> Part-time</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                      <div class="apply">
+                        <div class="icon">
+                          <i class="fa-solid fa-heart"></i>
+                          <button>Apply Now</button>
+                        </div>
+                        <div class="applyDate">
+                          <p>Date line: 31 Jan 2020</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="pagination">
+                <ul>
+                  <li><a href="#"><</a></li>
+                  <li><a href="#">01</a></li>
+                  <li><a href="#">02</a></li>
+                  <li><a href="#">></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Job section end -->
+    </main>
+
+    <!-- * Footer start -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footerLeft">
+            <div class="logo">
+              <img src="./assets/images/home/logo.png.webp" alt="logo" />
+            </div>
+            <p class="desc">
+              The automated process starts as soon as <br />
+              your clothes go into the machine.The <br />
+              outcome is gleaming clothes.
+            </p>
+            <div class="socialList">
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://www.facebook.com/?locale=az_AZ" target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="https://www.facebook.com/?locale=az_AZ" target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footerMid">
+            <div class="tittle">
+              <h4>Useful links</h4>
+            </div>
+            <ul class="footerList">
+              <li><a href="#">Design & creatives</a></li>
+              <li><a href="#">Telecommunication</a></li>
+              <li><a href="#">Restaurant</a></li>
+              <li><a href="#">Programing</a></li>
+              <li><a href="#">Architecture</a></li>
+            </ul>
+          </div>
+          <div class="footerRight">
+            <div class="tittle">
+              <h4>Subscribe Newsletter</h4>
+              <p class="desc">
+                Subscribe newsletter to get updates <br />
+                about new jobs.
+              </p>
+            </div>
+            <form>
+              <input type="email" placeholder="Enter your email" required />
+              <button>subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            Copyright ©2024 All rights reserved | This template is made with
+            <i class="fa-solid fa-heart"></i> by
+            <a href="https://colorlib.com/wp/templates/" target="_blank"
+              >Colorlib</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- * Footer end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

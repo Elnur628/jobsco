@@ -1,0 +1,456 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// * Header start
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  .container {
+    @include container(80%);
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .leftContent {
+        display: flex;
+        align-items: center;
+        gap: 55px;
+        .navBar {
+          margin-left: 30px;
+          .navList {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            .navItem {
+              a {
+                color: $color-blue;
+                font-weight: 700;
+                padding: 28px 5px;
+                display: inline-block;
+                font-size: 16px;
+                text-transform: uppercase;
+                position: relative;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 18px;
+                  left: 0;
+                  width: 100%;
+                  height: 2px;
+                  background-color: $color-primary;
+                  transform: scaleX(0);
+                  transition: transform 0.3s ease;
+                }
+                &:hover {
+                  color: $color-primary;
+                }
+                &:hover::after {
+                  transform: scaleX(1);
+                }
+              }
+            }
+            .dropdown {
+              position: relative;
+              transition: all 0.3s ease;
+
+              .dropdown-content {
+                visibility: hidden;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: $color-primary;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+                z-index: 1;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+
+                .dropItem {
+                  .dropLink {
+                    color: $color-white;
+                    padding: 12px 16px;
+                    display: inline-block;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    transition: all 0.3s ease;
+                    &:hover {
+                      transform: translateX(5px);
+                    }
+                    &::after {
+                      display: none;
+                    }
+                  }
+                }
+              }
+
+              &:hover .dropdown-content {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobileMenu {
+      display: none;
+    }
+    .mobileBar {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      display: none;
+    }
+    .buttonGroup {
+      .btnSuccess {
+        @include btn(#27cb8b);
+        margin-right: 10px;
+        &:hover{
+          background-color: $color-primary;
+        }
+      }
+      .btnPrimary {
+        @include btn(#000dff);
+        &:hover {
+          background-color: $color-green;
+        }
+      }
+    }
+  }
+}
+// * Header end
+
+// ! 992px - 1199px
+@media ((min-width: 992px) and (max-width:1199px)) {
+  .header {
+    .container {
+      @include container(90%);
+      .row {
+        .leftContent {
+          .navBar {
+            margin-left: 0;
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 768px - 992px
+@media ((min-width: 768px) and (max-width:992px)) {
+  .header {
+    .container {
+      @include container(90%);
+      padding-left: 0;
+      padding-right: 0;
+      .row {
+        .leftContent {
+          .navBar {
+            display: none;
+          }
+        }
+      }
+      .mobileMenu {
+        width: 100%;
+        background: $color-gray;
+        padding: 8px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        a {
+          @include btn(#000);
+          display: block;
+          padding: 8px 15px;
+        }
+      }
+      .mobileBar {
+        background: $color-gray;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        .mobileList {
+          display: flex;
+          flex-direction: column;
+          padding: 8px 15px;
+          gap: 15px;
+          li {
+            a {
+              color: $color-white;
+              font-size: 14px;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 425px - 768px
+@media (max-width: 768px) and (min-width: 425px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    .container {
+      @include container(90%);
+      padding: 0 15px;
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftContent {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .navBar {
+            display: none;
+          }
+        }
+      }
+      .mobileMenu {
+        width: 100%;
+        background: $color-gray;
+        padding: 8px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        a {
+          @include btn(#000);
+          display: block;
+          padding: 8px 15px;
+        }
+      }
+      .mobileBar {
+        background: $color-gray;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        .mobileList {
+          display: flex;
+          flex-direction: column;
+          padding: 8px 15px;
+          gap: 15px;
+          li {
+            a {
+              color: $color-white;
+              font-size: 14px;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+
+    .buttonGroup {
+      display: none;
+    }
+  }
+}
+
+// ! 375px - 425px
+@media (min-width: 375px) and (max-width: 425px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    .container {
+      @include container(90%);
+      padding: 0 15px;
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftContent {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .navBar {
+            display: none;
+          }
+        }
+      }
+      .mobileMenu {
+        width: 100%;
+        background: $color-gray;
+        padding: 8px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        a {
+          @include btn(#000);
+          display: block;
+          padding: 8px 15px;
+        }
+      }
+      .mobileBar {
+        background: $color-gray;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        .mobileList {
+          display: flex;
+          flex-direction: column;
+          padding: 8px 15px;
+          gap: 15px;
+          li {
+            a {
+              color: $color-white;
+              font-size: 14px;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+
+    .buttonGroup {
+      display: none;
+    }
+  }
+}
+
+// ! 320px - 375px
+@media (min-width: 320px) and (max-width: 375px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    .container {
+      @include container(100%);
+      padding: 0 15px;
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftContent {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .navBar {
+            display: none;
+          }
+        }
+      }
+      .mobileMenu {
+        width: 100%;
+        background: $color-gray;
+        padding: 8px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        a {
+          @include btn(#000);
+          display: block;
+          padding: 8px 15px;
+        }
+      }
+      .mobileBar {
+        background: $color-gray;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        .mobileList {
+          display: flex;
+          flex-direction: column;
+          padding: 8px 15px;
+          gap: 15px;
+          li {
+            a {
+              color: $color-white;
+              font-size: 14px;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+
+    .buttonGroup {
+      display: none;
+    }
+  }
+}
+
+// ! 280px - 320px
+@media (min-width: 280px) and (max-width: 320px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    .container {
+      @include container(100%);
+      padding: 0 15px;
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftContent {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .navBar {
+            display: none;
+          }
+        }
+      }
+      .mobileMenu {
+        width: 100%;
+        background: $color-gray;
+        padding: 8px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        a {
+          @include btn(#000);
+          display: block;
+          padding: 8px 15px;
+        }
+      }
+      .mobileBar {
+        background: $color-gray;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        .mobileList {
+          display: flex;
+          flex-direction: column;
+          padding: 8px 15px;
+          gap: 15px;
+          li {
+            a {
+              color: $color-white;
+              font-size: 14px;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+
+    .buttonGroup {
+      display: none;
+    }
+  }
+}

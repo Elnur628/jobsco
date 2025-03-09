@@ -1,0 +1,927 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// * Hero start
+
+.browsHero {
+  background-color: $color-bg-gray;
+  width: 100%;
+  .container {
+    .secCap {
+      padding: 150px 0;
+      h2 {
+        color: $color-blue;
+        font-size: 50px;
+        display: block;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+// * Hero end
+
+// * Job start
+
+.job {
+  padding: 100px 0;
+  width: 100%;
+  .container {
+    @include container(80%);
+    .row {
+      display: grid;
+      grid-template-columns: 20% 75%;
+      gap: 80px;
+      .filterWrapper {
+        h3 {
+          font-size: 20px;
+          margin-bottom: 25px;
+          color: $color-blue;
+          font-weight: 400;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          input {
+            padding: 20px 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: solid 1px #e8e8e8;
+          }
+          select {
+            padding: 20px 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: solid 1px #e8e8e8;
+            transition: all 0.2s ease-in-out;
+          }
+          button {
+            @include btn(#00d363);
+            border: none;
+            padding: 13px 29px 13px 29px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            &:hover {
+              background-color: $color-white;
+              color: #00d363;
+              border: 1px solid #00d363;
+            }
+          }
+        }
+      }
+      .listeningWrapper {
+        .wrapper {
+          display: flex;
+          justify-content: space-between;
+          h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: $color-blue;
+            font-weight: 400;
+          }
+          form {
+            select {
+              padding: 20px 10px;
+              background-color: #fff;
+              border-radius: 5px;
+              border: solid 1px #e8e8e8;
+              padding-right: 70px;
+            }
+          }
+        }
+        .tableWrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding-top: 40px;
+          .table {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #eee;
+            padding: 25px 20px;
+            transition: all 0.3s ease;
+            .imageCap {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              .cap {
+                h4 {
+                  font-size: 24px;
+                  margin-bottom: 10px;
+                  font-weight: 400;
+                  transition: all 0.3s ease;
+                  cursor: pointer;
+                  &:hover {
+                    color: #00d363;
+                  }
+                }
+                .locDate {
+                  display: flex;
+                  gap: 50px;
+                  span {
+                    margin-bottom: 0;
+                    font-size: 16px;
+                    color: #aab1b7;
+                  }
+                }
+              }
+            }
+            .info {
+              display: flex;
+              .apply {
+                .icon {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  button {
+                    @include btn(#00d363);
+                    border: none;
+                    padding: 13px 29px 13px 29px;
+                    cursor: pointer;
+                    border: 1px solid transparent;
+                    transition: all 0.3s ease;
+                    &:hover {
+                      background-color: $color-white;
+                      color: #00d363;
+                      border: 1px solid #00d363;
+                    }
+                  }
+                  i {
+                    width: 40px;
+                    height: 40px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                    color: #00d363;
+                    font-size: 14px;
+                    line-height: 40px;
+                    text-align: center;
+                    display: inline-block;
+                    background: #effdf5;
+                    margin-right: 15px;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    &:hover {
+                      background: #00d363;
+                      color: $color-white;
+                    }
+                  }
+                }
+                .applyDate {
+                  display: flex;
+                  justify-content: flex-end;
+                  margin-top: 15px;
+                  p {
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    font-style: italic;
+                    color: #7a838b;
+                  }
+                }
+              }
+            }
+
+            &:hover {
+              border: 1px solid #00d363;
+            }
+          }
+        }
+
+        .pagination {
+          text-align: center;
+          margin-top: 20px;
+          li {
+            display: inline-block;
+            a {
+              width: 38px;
+              height: 38px;
+              border: 1px solid #eaeaea;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              border-radius: 50%;
+              font-size: 16px;
+              text-align: center;
+              line-height: 38px;
+              display: inline-block;
+              color: #aab1b7;
+              font-size: 14px;
+              margin: 0 4px;
+              transition: all 0.3s ease;
+              &:hover {
+                border-color: #00d363;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * Job end
+
+//! Responsive
+
+// ! 992px - 1199px
+@media (min-width: 992px) and (max-width: 1199px) {
+  .browsHero {
+    .container {
+      @include container(90%);
+      .secCap {
+        padding: 100px 0;
+        h2 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+  .job {
+    padding: 80px 0;
+    .container {
+      @include container(90%);
+      .row {
+        grid-template-columns: 25% 70%;
+        gap: 60px;
+
+        .filterWrapper {
+          h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+          form {
+            gap: 12px;
+            input,
+            select {
+              padding: 18px 8px;
+              font-size: 14px;
+            }
+            button {
+              padding: 12px 25px;
+              font-size: 16px;
+            }
+          }
+        }
+
+        .listeningWrapper {
+          .wrapper {
+            h3 {
+              font-size: 18px;
+              margin-bottom: 20px;
+            }
+            form select {
+              padding: 18px 8px;
+              font-size: 14px;
+            }
+          }
+
+          .tableWrapper {
+            padding-top: 30px;
+
+            .table {
+              padding: 20px 15px;
+
+              .imageCap {
+                gap: 12px;
+                .cap {
+                  h4 {
+                    font-size: 22px;
+                    margin-bottom: 8px;
+                  }
+                  .locDate {
+                    gap: 40px;
+                    span {
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }
+
+              .info {
+                .apply {
+                  button {
+                    padding: 12px 25px;
+                    font-size: 16px;
+                  }
+                  i {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 12px;
+                    line-height: 35px;
+                  }
+                  .applyDate p {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+
+          .pagination {
+            margin-top: 15px;
+            li a {
+              width: 35px;
+              height: 35px;
+              font-size: 14px;
+              line-height: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 768px - 992px
+@media (min-width: 768px) and (max-width: 992px) {
+  .browsHero {
+    .container {
+      @include container(95%);
+      .secCap {
+        padding: 130px 0 80px;
+        h2 {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+
+  .job {
+    padding: 60px 0;
+    .container {
+      @include container(95%);
+      .row {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+
+        .filterWrapper {
+          h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+          form {
+            gap: 10px;
+            input,
+            select {
+              padding: 15px 8px;
+              font-size: 13px;
+            }
+            button {
+              padding: 10px 20px;
+              font-size: 15px;
+            }
+          }
+        }
+
+        .listeningWrapper {
+          .wrapper {
+            h3 {
+              font-size: 18px;
+              margin-bottom: 20px;
+            }
+            form select {
+              padding: 15px 8px;
+              font-size: 13px;
+            }
+          }
+
+          .tableWrapper {
+            padding-top: 30px;
+
+            .table {
+              padding: 18px 12px;
+
+              .imageCap {
+                gap: 10px;
+                .cap {
+                  h4 {
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                  }
+                  .locDate {
+                    gap: 30px;
+                    span {
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }
+
+              .info {
+                .apply {
+                  button {
+                    padding: 10px 20px;
+                    font-size: 15px;
+                  }
+                  i {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 12px;
+                    line-height: 30px;
+                  }
+                  .applyDate p {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+
+          .pagination {
+            margin-top: 15px;
+            li a {
+              width: 32px;
+              height: 32px;
+              font-size: 13px;
+              line-height: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 425px - 768px
+@media (min-width: 425px) and (max-width: 768px) {
+  .browsHero {
+    .container {
+      @include container(95%);
+      .secCap {
+        padding: 130px 0 80px;
+        h2 {
+          font-size: 30px;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+
+  .job {
+    padding: 50px 0;
+    .container {
+      @include container(95%);
+      .row {
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        .filterWrapper {
+          h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+          form {
+            gap: 8px;
+            input,
+            select {
+              padding: 12px 8px;
+              font-size: 12px;
+            }
+            button {
+              padding: 8px 18px;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .listeningWrapper {
+          .wrapper {
+            h3 {
+              font-size: 16px;
+              margin-bottom: 15px;
+            }
+            form select {
+              padding: 12px 8px;
+              font-size: 12px;
+            }
+          }
+
+          .tableWrapper {
+            padding-top: 25px 0;
+
+            .table {
+
+              .imageCap {
+                gap: 4px;
+                .cap {
+                  h4 {
+                    font-size: 18px;
+                    margin-bottom: 6px;
+                  }
+                  .locDate {
+                    flex-direction: column;
+
+                    gap: 20px;
+                    span {
+                      font-size: 13px;
+                    }
+                  }
+                }
+              }
+
+              .info {
+                .apply {
+                  button {
+                    padding: 8px 0;
+                    font-size: 14px;
+                  }
+                  i {
+                    width: 28px;
+                    height: 28px;
+                    font-size: 11px;
+                    line-height: 28px;
+                  }
+                  .applyDate p {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+
+          .pagination {
+            margin-top: 12px;
+            li a {
+              width: 30px;
+              height: 30px;
+              font-size: 12px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 375px - 425px
+@media (min-width: 375px) and (max-width: 425px) {
+  .browsHero {
+    .container {
+      @include container(95%);
+      .secCap {
+        padding: 130px 0 80px;
+        h2 {
+          font-size: 26px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  .job {
+    padding: 40px 0;
+    .container {
+      @include container(95%);
+      margin: 0 auto;
+      .row {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+
+        .filterWrapper {
+          h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+          form {
+            gap: 6px;
+            input,
+            select {
+              padding: 10px 6px;
+              font-size: 11px;
+            }
+            button {
+              padding: 7px 16px;
+              font-size: 13px;
+            }
+          }
+        }
+
+        .listeningWrapper {
+          .wrapper {
+            h3 {
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+            form select {
+              padding: 10px 6px;
+              font-size: 11px;
+            }
+          }
+
+          .tableWrapper {
+            padding-top: 20px;
+
+            .table {
+              padding: 12px 8px;
+
+              .imageCap {
+                gap: 6px;
+                .cap {
+                  h4 {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                  }
+                  .locDate {
+                    gap: 15px;
+                    span {
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+
+              .info {
+                .apply {
+                  button {
+                    padding: 7px 16px;
+                    font-size: 13px;
+                  }
+                  i {
+                    width: 26px;
+                    height: 26px;
+                    font-size: 10px;
+                    line-height: 26px;
+                  }
+                  .applyDate p {
+                    font-size: 11px;
+                  }
+                }
+              }
+            }
+          }
+
+          .pagination {
+            margin-top: 10px;
+            li a {
+              width: 28px;
+              height: 28px;
+              font-size: 11px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 320px - 375px
+@media (min-width: 320px) and (max-width: 375px) {
+  .browsHero {
+    .container {
+      @include container(95%);
+      .secCap {
+        padding: 130px 0 80px;
+        h2 {
+          font-size: 26px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  .job {
+    padding: 75px 0;
+    .container {
+      @include container(95%);
+      .row {
+        display: block;
+        gap: 25px;
+
+        .filterWrapper,
+        .listeningWrapper {
+          width: 100%;
+          padding: 0 10px;
+
+          h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+
+          form {
+            input, select, button {
+              font-size: 15px;
+              padding: 12px;
+              width: 100%;
+            }
+          }
+        }
+
+        .listeningWrapper {
+          .wrapper {
+            flex-direction: column;
+
+            h3 {
+              font-size: 18px;
+            }
+
+            form {
+              select {
+                width: 100%;
+                padding: 12px;
+              }
+            }
+          }
+
+          .tableWrapper {
+            padding-top: 30px;
+
+            .table {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 15px;
+              padding: 20px;
+
+              .imageCap {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+
+                .cap {
+                  h4 {
+                    font-size: 22px;
+                    margin-bottom: 8px;
+                  }
+
+                  .locDate {
+                    flex-direction: column;
+                    gap: 8px;
+
+                    span {
+                      font-size: 15px;
+                    }
+                  }
+                }
+              }
+
+              .info {
+                .apply {
+                  .icon {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    button {
+                      font-size: 15px;
+                      padding: 12px 20px;
+                    }
+
+                    i {
+                      width: 35px;
+                      height: 35px;
+                      font-size: 13px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .pagination {
+            li {
+              a {
+                width: 34px;
+                height: 34px;
+                line-height: 34px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 280px - 320px
+@media (min-width: 280px) and (max-width: 320px) {
+  .browsHero {
+    .container {
+      @include container(100%);
+      .secCap {
+        padding: 130px 0 80px;
+        h2 {
+          font-size: 26px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  .job {
+    padding: 50px 0;
+    .container {
+      @include container(100%);
+      .row {
+        display: block;
+        gap: 20px;
+
+        .filterWrapper,
+        .listeningWrapper {
+          width: 100%;
+          padding: 0 10px;
+
+          h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+
+          form {
+            input, select, button {
+              font-size: 14px;
+              padding: 10px;
+              width: 100%;
+            }
+          }
+        }
+
+        .listeningWrapper {
+          .wrapper {
+            flex-direction: column;
+
+            h3 {
+              font-size: 18px;
+            }
+
+            form {
+              select {
+                width: 100%;
+                padding: 10px;
+              }
+            }
+          }
+
+          .tableWrapper {
+            padding-top: 20px;
+
+            .table {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 10px;
+              padding: 15px;
+
+              .imageCap {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+
+                .cap {
+                  h4 {
+                    font-size: 20px;
+                    margin-bottom: 5px;
+                  }
+
+                  .locDate {
+                    flex-direction: column;
+                    gap: 5px;
+
+                    span {
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }
+
+              .info {
+                .apply {
+                  .icon {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    button {
+                      font-size: 14px;
+                      padding: 10px 15px;
+                    }
+
+                    i {
+                      width: 30px;
+                      height: 30px;
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .pagination {
+            li {
+              a {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

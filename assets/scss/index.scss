@@ -1,0 +1,20 @@
+// ! Base 
+@import "./base/reset";
+@import "./base/typography";
+
+// ! Layout 
+@import "./layout/header";
+@import "./layout/footer";
+
+// ! Pages
+@import "./pages/home";
+@import "./pages/browse";
+@import "./pages/cadidates";
+@import "./pages/jobDetails";
+@import "./pages/contact";
+@import "./pages/logIn";
+@import "./pages/signUp";
+
+// ! Components
+@import "./components/carousel";
+

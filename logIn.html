@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--* Fontawsome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- * Css Link -->
+    <link rel="stylesheet" href="./assets/scss/index.css" />
+
+    <!-- * Slick CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>JobSco</title>
+  </head>
+  <body>
+    <!-- * Header start -->
+
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="leftContent">
+            <div class="logo">
+              <a href="index.html"
+                ><img src="./assets/images/home/logo.png.webp" alt="logo"
+              /></a>
+            </div>
+            <nav class="navBar">
+              <ul class="navList">
+                <li class="navItem"><a href="./index.html">home</a></li>
+                <li class="navItem"><a href="./browse.html">browse job</a></li>
+                <li class="navItem dropdown">
+                  <a href="#">page</a>
+                  <ul class="dropdown-content">
+                    <li class="dropItem">
+                      <a href="#" class="dropLink">Blog</a>
+                    </li>
+                    <li class="dropItem">
+                      <a href="./candidates.html" class="dropLink"
+                        >Candidates</a
+                      >
+                    </li>
+                    <li class="dropItem">
+                      <a href="./jobDetails.html" class="dropLink"
+                        >Job Details</a
+                      >
+                    </li>
+                    <li class="dropItem">
+                      <a href="#" class="dropLink">Blog Details</a>
+                    </li>
+                    <li class="dropItem">
+                      <a href="#" class="dropLink">Element</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navItem"><a href="./contact.html">contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="buttonGroup">
+            <a href="#" class="btnSuccess">post a job</a>
+            <a href="./logIn.html" class="btnPrimary">log in</a>
+          </div>
+        </div>
+        <div class="mobileMenu">
+          <a href="#" class="btn">MENU <i class="fa-solid fa-bars"></i></a>
+        </div>
+        <div class="mobileBar">
+          <ul class="mobileList">
+            <li><a href="./index.html">home</a></li>
+            <li><a href="">Browse Job</a></li>
+            <li><a href="">page</a></li>
+            <li><a href="">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- * Header end -->
+
+    <main>
+      <!-- * Login start -->
+
+      <section class="logIn">
+        <div class="container">
+          <div class="row">
+            <div class="logInCard">
+              <div class="tittle">
+                <span>Login</span>
+                <p>Enter Login details to get access</p>
+              </div>
+              <div class="inputBox">
+                <div class="singleInput">
+                  <label>Username or Email Address</label>
+                  <input
+                    type="text"
+                    placeholder="Username / Email address"
+                    required
+                  />
+                </div>
+                <div class="singleInput">
+                  <label>Password</label>
+                  <input
+                    type="password"
+                    placeholder="Enter Password"
+                    required
+                  />
+                </div>
+                <div class="loginCheck">
+                  <div class="box">
+                    <input type="checkbox" />
+                    <label>Keep me logged in</label>
+                  </div>
+                  <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                  </div>
+                </div>
+                <div class="logInFooter">
+                  <p>
+                    Don’t have an account?
+                    <a href="./signUp.html">Sign Up</a> here
+                  </p>
+                  <button>LOGIN</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Login end -->
+    </main>
+
+    <!-- * Footer start -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footerLeft">
+            <div class="logo">
+              <a href="index.html"
+                ><img src="./assets/images/home/logo.png.webp" alt="logo"
+              /></a>
+            </div>
+            <p class="desc">
+              The automated process starts as soon as <br />
+              your clothes go into the machine.The <br />
+              outcome is gleaming clothes.
+            </p>
+            <div class="socialList">
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://www.facebook.com/?locale=az_AZ" target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="https://www.facebook.com/?locale=az_AZ" target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footerMid">
+            <div class="tittle">
+              <h4>Useful links</h4>
+            </div>
+            <ul class="footerList">
+              <li><a href="#">Design & creatives</a></li>
+              <li><a href="#">Telecommunication</a></li>
+              <li><a href="#">Restaurant</a></li>
+              <li><a href="#">Programing</a></li>
+              <li><a href="#">Architecture</a></li>
+            </ul>
+          </div>
+          <div class="footerRight">
+            <div class="tittle">
+              <h4>Subscribe Newsletter</h4>
+              <p class="desc">
+                Subscribe newsletter to get updates <br />
+                about new jobs.
+              </p>
+            </div>
+            <form>
+              <input type="email" placeholder="Enter your email" required />
+              <button>subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            Copyright ©2024 All rights reserved | This template is made with
+            <i class="fa-solid fa-heart"></i> by
+            <a href="https://colorlib.com/wp/templates/" target="_blank"
+              >Colorlib</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- * Footer end -->
+
+    <!--* Slick JS-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"
+      integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script type="text/javascript">
+      $(".slick-wrapper").slick({
+        centerMode: true,
+        centerPadding: "60px",
+        slidesToShow: 4,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
